@@ -22,6 +22,6 @@ class ori_data():
 
         for i in range(0, len(process_ori)):
             p = Process(pid=i+1, size=process_ori[i]["size"],
-                        time=process_ori[i]["time"], finish=False)
+                        time=process_ori[i]["time"], finish="Start")
             process_list.append(p)
         return process_list
