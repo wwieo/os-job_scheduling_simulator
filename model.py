@@ -6,14 +6,11 @@ class Memory(object):
         self.isUsing = isUsing
 
 class Process(object):
-    def __init__(self, pid:int, size:int, 
-                 time: int, finish: str) -> None:
+    def __init__(self, pid:int, size:int, isUsing:bool,
+                 clockEnd:int, status:str, memory:object) -> None:
         self.pid = pid
         self.size = size
-        self.time = time
-        self.finish = finish
-
-class Status(object):
-    def __init__(self, memory:object, process:object) -> None:
+        self.isUsing = isUsing
+        self.clockEnd = clockEnd
+        self.status = status
         self.memory = memory
-        self.process = process
